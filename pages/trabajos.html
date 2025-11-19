@@ -1,43 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Trabajos | red.agenciacreativa</title>
-  <meta name="description" content="Algunos de los kits y proyectos realizados desde red.agenciacreativa.">
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <meta name="description" content="Algunos de los kits, optimizaciones y proyectos realizados desde red.agenciacreativa.">
+  <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
 
-<header>
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="sobremi.html">Sobre mí</a></li>
-      <li><a href="servicios.html">Servicios</a></li>
-      <li><a href="trabajos.html">Trabajos</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
-</header>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <div class="nav__brand">red.agenciacreativa</div>
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Inicio</a></li>
+          <li><a class="nav__link" href="sobremi.html">Sobre mí</a></li>
+          <li><a class="nav__link" href="servicios.html">Servicios</a></li>
+          <li><a class="nav__link nav__link--active" href="trabajos.html">Trabajos</a></li>
+          <li><a class="nav__link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<main>
-  <h1>Trabajos</h1>
-  <p>Acá podés ver algunos de los formatos y kits que trabajo desde red.agenciacreativa.</p>
+  <main class="site-main">
+    <section class="hero">
+      <div class="container hero__content">
+        <div class="hero__text">
+          <h1>Trabajos</h1>
+          <p>
+            Algunos ejemplos de formatos y kits que trabajo desde red.agenciacreativa.
+            Esta sección crece a medida que se suman proyectos y marcas.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <h2>Kit Perfil Pro</h2>
-  <p>Optimización de bio, foto de perfil, destacados y estructura de feed para que tu Instagram comunique claro qué hacés y a quién ayudás.</p>
+    <section class="home-services">
+      <div class="container">
+        <h2>Proyectos y kits</h2>
+        <p class="home-services__intro">
+          Cada marca tiene una necesidad diferente. Estos son algunos de los tipos de trabajos
+          que podemos encarar juntas.
+        </p>
 
-  <h2>Kit Evaluación de Marca</h2>
-  <p>Diagnóstico de tu presencia digital, puntos fuertes, oportunidades de mejora y un plan simple para ordenar tu comunicación.</p>
+        <div class="grid grid--3">
+          <article class="card">
+            <h3>Kit Perfil Pro</h3>
+            <p>
+              Optimización de bio, foto de perfil, destacados y estructura del feed
+              para que se entienda rápido quién sos y qué ofrecés.
+            </p>
+          </article>
 
-  <p>Si querés ver ejemplos visuales, podés pasar por el Instagram de la agencia:</p>
-  <p><a href="https://www.instagram.com/red.agenciacreativa/" target="_blank" rel="noopener">Ver trabajos en Instagram</a></p>
-</main>
+          <article class="card">
+            <h3>Kit Evaluación de Marca</h3>
+            <p>
+              Diagnóstico de tu presencia digital actual, puntos fuertes, oportunidades
+              de mejora y plan de acción simple para ordenar tu comunicación.
+            </p>
+          </article>
 
-<footer>
-  <p>© 2025 · red.agenciacreativa · Florencia Codesal</p>
-</footer>
+          <article class="card">
+            <h3>Campañas puntuales</h3>
+            <p>
+              Armado de campañas específicas (lanzamientos, promos, fechas clave)
+              con piezas, mensajes y estructura de contenido.
+            </p>
+          </article>
+        </div>
+
+        <p class="home-services__intro">
+          Si querés ver más ejemplos visuales, podés pasar por el Instagram de la agencia:
+          <a href="https://www.instagram.com/red.agenciacreativa/" target="_blank" rel="noopener">@red.agenciacreativa</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 · red.agenciacreativa · Florencia Codesal</p>
+    </div>
+  </footer>
 
 </body>
 </html>

@@ -1,39 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto | red.agenciacreativa</title>
-  <meta name="description" content="Escribime para coordinar una propuesta a medida para tu marca o emprendimiento.">
-  <link rel="stylesheet" href="../assets/css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | red.agenciacreativa</title>
+    <meta name="description" content="Escribime para coordinar una propuesta de comunicación y marketing digital para tu marca.">
+    <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
 
-<header>
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="sobremi.html">Sobre mí</a></li>
-      <li><a href="servicios.html">Servicios</a></li>
-      <li><a href="trabajos.html">Trabajos</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
+<header class="site-header">
+    <div class="container">
+        <nav class="nav">
+            <div class="nav__brand">red.agenciacreativa</div>
+            <ul class="nav__list">
+                <li><a class="nav__link" href="index.html">Inicio</a></li>
+                <li><a class="nav__link" href="sobremi.html">Sobre mí</a></li>
+                <li><a class="nav__link" href="servicios.html">Servicios</a></li>
+                <li><a class="nav__link" href="trabajos.html">Trabajos</a></li>
+                <li><a class="nav__link nav__link--active" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<main>
-  <h1>Contacto</h1>
-  <p>Si querés una propuesta, tenés una idea en mente o simplemente querés ordenar tu comunicación, podemos hablar sin compromiso.</p>
+<main class="site-main">
+    <section class="hero">
+        <div class="container hero__content">
+            <div class="hero__text">
+                <h1>Contacto</h1>
+                <p>
+                    Si querés una propuesta para tu marca, tenés una idea en mente
+                    o simplemente necesitás ordenar tu comunicación, podemos hablar sin compromiso.
+                </p>
+            </div>
+        </div>
+    </section>
 
-  <p>Podés escribirme por Instagram o por mail:</p>
-  <p>
-    <a href="https://www.instagram.com/red.agenciacreativa/" target="_blank" rel="noopener">Instagram · @red.agenciacreativa</a><br>
-    <span>Mail: tuemail@ejemplo.com</span>
-  </p>
+    <section class="home-services">
+        <div class="container">
+            <h2>Hablemos de tu marca</h2>
+            <p class="home-services__intro">
+                Podés escribirme por Instagram, por mail o completar este formulario
+                para contarme un poco más sobre tu proyecto.
+            </p>
+
+            <div class="grid grid--3">
+                <article class="card">
+                    <h3>Escribime por mail</h3>
+                    <p>
+                        Podés mandar un correo a
+                        <strong>tuemail@ejemplo.com</strong> con una breve descripción
+                        de tu marca y qué te gustaría trabajar.
+                    </p>
+                </article>
+                <article class="card">
+                    <h3>Instagram</h3>
+                    <p>
+                        Si preferís algo más directo, podemos chatear por DM en Instagram:
+                        <a href="https://www.instagram.com/red.agenciacreativa/" target="_blank" rel="noopener">
+                            @red.agenciacreativa
+                        </a>.
+                    </p>
+                </article>
+                <article class="card">
+                    <h3>Formulario</h3>
+                    <p>
+                        Próximamente vas a poder completar un formulario rápido
+                        para recibir una propuesta más ajustada a tu proyecto.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
 </main>
 
-<footer>
-  <p>© 2025 · red.agenciacreativa · Florencia Codesal</p>
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2025 · red.agenciacreativa · Florencia Codesal</p>
+    </div>
 </footer>
 
 </body>
