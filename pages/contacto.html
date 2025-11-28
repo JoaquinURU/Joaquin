@@ -1,88 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto | red.agenciacreativa</title>
-    <meta name="description" content="Escribime para coordinar una propuesta de comunicación y marketing digital para tu marca.">
-    <link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | red.agenciacreativa</title>
+  <meta name="description" content="Escribime para coordinar una propuesta para tu marca.">
+  <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
 
 <header class="site-header">
-    <div class="container">
-        <nav class="nav">
-            <div class="nav__brand">red.agenciacreativa</div>
+  <div class="container">
+    <nav class="nav">
+      <div class="nav__brand">
+        <a href="../index.html">red.agenciacreativa</a>
+      </div>
 
-            <input type="checkbox" id="nav-toggle" class="nav__toggle">
-            <label for="nav-toggle" class="nav__toggle-label" aria-label="Abrir menú">☰</label>
-
-            <ul class="nav__list">
-                <li><a class="nav__link" href="index.html">Inicio</a></li>
-                <li><a class="nav__link" href="sobremi.html">Sobre mí</a></li>
-                <li><a class="nav__link" href="servicios.html">Servicios</a></li>
-                <li><a class="nav__link" href="trabajos.html">Trabajos</a></li>
-                <li><a class="nav__link nav__link--active" href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </div>
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html">Inicio</a></li>
+        <li><a class="nav__link" href="sobremi.html">Sobre mí</a></li>
+        <li><a class="nav__link" href="servicios.html">Servicios</a></li>
+        <li><a class="nav__link" href="trabajos.html">Trabajos</a></li>
+        <li><a class="nav__link nav__link--active" href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main class="site-main">
-    <section class="hero">
-        <div class="container hero__content">
-            <div class="hero__text">
-                <h1>Contacto</h1>
-                <p>
-                    Si querés una propuesta para tu marca o simplemente ordenar tu comunicación,
-                    podemos hablar y ver qué tipo de acompañamiento te sirve más.
-                </p>
-            </div>
-        </div>
-    </section>
+  <section class="hero">
+    <div class="container hero__content">
+      <h1>Hablemos de tu marca</h1>
+      <p>
+        Contame en qué etapa estás y qué te gustaría lograr con tu comunicación digital.
+      </p>
+    </div>
+  </section>
 
-    <section class="home-services">
-        <div class="container">
-            <h2>Hablemos de tu marca</h2>
-            <p class="home-services__intro">
-                Podés escribirme por Instagram, por mail o completar este formulario
-                para contarme un poco más sobre tu proyecto.
-            </p>
+  <section class="home-services">
+    <div class="container">
+      <h2>Formulario de contacto</h2>
 
-            <div class="grid grid--3">
-                <article class="card">
-                    <h3>Escribime por mail</h3>
-                    <p>
-                        Podés mandar un correo a
-                        <strong>tuemail@ejemplo.com</strong> con una breve descripción
-                        de tu marca y qué te gustaría trabajar.
-                    </p>
-                </article>
-                <article class="card">
-                    <h3>Instagram</h3>
-                    <p>
-                        Si preferís algo más directo, podemos chatear por DM en Instagram:
-                        <a href="https://www.instagram.com/red.agenciacreativa/" target="_blank" rel="noopener">
-                            @red.agenciacreativa
-                        </a>.
-                    </p>
-                </article>
-                <article class="card">
-                    <h3>Formulario</h3>
-                    <p>
-                        Próximamente vas a poder completar un formulario rápido
-                        para recibir una propuesta más ajustada a tu proyecto.
-                    </p>
-                </article>
-            </div>
+      <form class="form" action="#" method="post" novalidate>
+        <div class="form__group">
+          <label class="form__label" for="nombre">Nombre</label>
+          <input class="form__field" id="nombre" name="nombre" type="text" required />
         </div>
-    </section>
+
+        <div class="form__group">
+          <label class="form__label" for="email">Email</label>
+          <input class="form__field" id="email" name="email" type="email" required />
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="mensaje">Mensaje</label>
+          <textarea class="form__textarea" id="mensaje" name="mensaje" rows="4" required></textarea>
+        </div>
+
+        <div style="text-align:center; margin-top: 8px;">
+          <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+        </div>
+      </form>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
-    <div class="container">
-        <p>© 2025 · red.agenciacreativa · Florencia Codesal</p>
-    </div>
+  <div class="container">
+    <p>© 2025 · red.agenciacreativa · Florencia Codesal</p>
+  </div>
 </footer>
 
 </body>
