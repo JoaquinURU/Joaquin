@@ -1,75 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacto | red.agenciacreativa</title>
-  <meta name="description" content="Escribime para coordinar una propuesta para tu marca.">
-  <link rel="stylesheet" href="../assets/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | red.agenciacreativa</title>
+    <meta name="description"
+        content="Escribime para cotizaciones, propuestas o consultas sobre marketing digital y contenido para tu marca.">
+    <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
+
 <body>
 
-<header class="site-header">
-  <div class="container">
-    <nav class="nav">
-      <div class="nav__brand">
-        <a href="../index.html">red.agenciacreativa</a>
-      </div>
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__brand">
+                    <a href="../index.html">red.agenciacreativa</a>
+                </div>
 
-      <ul class="nav__list">
-        <li><a class="nav__link" href="../index.html">Inicio</a></li>
-        <li><a class="nav__link" href="sobremi.html">Sobre mí</a></li>
-        <li><a class="nav__link" href="servicios.html">Servicios</a></li>
-        <li><a class="nav__link" href="trabajos.html">Trabajos</a></li>
-        <li><a class="nav__link nav__link--active" href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+                <input type="checkbox" id="nav-toggle" class="nav__checkbox">
+                <label for="nav-toggle" class="nav__toggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
 
-<main class="site-main">
-  <section class="hero">
-    <div class="container hero__content">
-      <h1>Hablemos de tu marca</h1>
-      <p>
-        Contame en qué etapa estás y qué te gustaría lograr con tu comunicación digital.
-      </p>
-    </div>
-  </section>
-
-  <section class="home-services">
-    <div class="container">
-      <h2>Formulario de contacto</h2>
-
-      <form class="form" action="#" method="post" novalidate>
-        <div class="form__group">
-          <label class="form__label" for="nombre">Nombre</label>
-          <input class="form__field" id="nombre" name="nombre" type="text" required />
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="../index.html">Inicio</a></li>
+                    <li><a class="nav__link" href="sobremi.html">Sobre mí</a></li>
+                    <li><a class="nav__link" href="servicios.html">Servicios</a></li>
+                    <li><a class="nav__link" href="trabajos.html">Trabajos</a></li>
+                    <li><a class="nav__link nav__link--active" href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div class="form__group">
-          <label class="form__label" for="email">Email</label>
-          <input class="form__field" id="email" name="email" type="email" required />
+    <main class="site-main">
+
+        <!-- Bloque de introducción -->
+        <section class="contact-hero">
+            <div class="container contact-hero__content">
+                <div class="contact-hero__text">
+                    <h1>Hablemos de tu marca</h1>
+                    <p>
+                        Contame en qué etapa estás y qué te gustaría lograr con tu comunicación digital.
+                        Te respondo siempre dentro de 1 a 2 días hábiles.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="contact-section">
+            <div class="container contact-layout">
+
+                <div class="contact-copy">
+                    <h2>¿Para qué podés escribirme?</h2>
+                    <p>
+                        Podés usar este formulario si querés:
+                    </p>
+                    <ul>
+                        <li>Cotizar gestión de redes o un servicio puntual.</li>
+                        <li>Consultar qué servicio se ajusta mejor a tu etapa.</li>
+                        <li>Pedir más información sobre los kits digitales.</li>
+                        <li>Proponer una colaboración o proyecto especial.</li>
+                    </ul>
+                    <p class="contact-copy__note">
+                        Cuanto más contexto me des, más concreta puede ser mi respuesta. 💌
+                    </p>
+                </div>
+
+                <div class="contact-form-card">
+                    <h2>Formulario de contacto</h2>
+
+                    <form class="form" action="#" method="post" novalidate>
+                        <div class="form__field">
+                            <label for="nombre">Nombre</label>
+                            <input id="nombre" name="nombre" type="text" required autocomplete="name">
+                        </div>
+
+                        <div class="form__field">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" required autocomplete="email">
+                        </div>
+
+                        <div class="form__field">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" required></textarea>
+                        </div>
+
+                        <div class="form__actions">
+                            <button type="submit" class="btn btn--primary">
+                                Enviar mensaje
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2025 · red.agenciacreativa · Florencia Codesal</p>
         </div>
-
-        <div class="form__group">
-          <label class="form__label" for="mensaje">Mensaje</label>
-          <textarea class="form__textarea" id="mensaje" name="mensaje" rows="4" required></textarea>
-        </div>
-
-        <div style="text-align:center; margin-top: 8px;">
-          <button type="submit" class="btn btn--primary">Enviar mensaje</button>
-        </div>
-      </form>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <p>© 2025 · red.agenciacreativa · Florencia Codesal</p>
-  </div>
-</footer>
+    </footer>
 
 </body>
+
 </html>
