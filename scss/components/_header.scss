@@ -1,0 +1,50 @@
+@use "../utilities/mixins";
+@use "../base/variables";
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+  background: rgba(10, 10, 14, 0.85);
+  border-bottom: 1px solid var(--border-soft);
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  &__brand {
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--border-soft);
+    background: rgba(255, 255, 255, 0.03);
+    font-weight: 700;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__link {
+    color: var(--text-muted);
+    padding: 6px 12px;
+    border-radius: 999px;
+    transition: .2s;
+
+    &:hover {
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+    }
+
+    &--active {
+      background: var(--accent);
+      color: #fff;
+    }
+  }
+}

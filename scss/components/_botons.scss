@@ -1,0 +1,25 @@
+@use "../utilities/extend";
+
+.btn {
+  @extend extend.btn-base;
+
+  &--primary {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: var(--shadow-soft);
+
+    &:hover {
+      background: #ff4a5f;
+    }
+  }
+
+  &--outline {
+    border: 1px solid var(--border-soft);
+    color: var(--text-muted);
+
+    &:hover {
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+    }
+  }
+}

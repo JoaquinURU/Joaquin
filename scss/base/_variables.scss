@@ -1,0 +1,24 @@
+:root {
+  --bg-1: #0e0f12;
+  --bg-2: #15171c;
+  --accent: #d7263d;
+  --accent-soft: rgba(215, 38, 61, 0.25);
+  --text: #f6f7f8;
+  --text-muted: #c1c3c9;
+  --border-soft: rgba(255, 255, 255, 0.12);
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+
+  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.55);
+}
+
+$breakpoints: (
+  mobile: 480px,
+  tablet: 750px,
+  desktop: 1080px
+);
+
+$section-padding: 60px;
+$gutter: 20px;

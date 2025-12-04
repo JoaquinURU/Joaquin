@@ -1,0 +1,106 @@
+/* ========== HERO HOME ========== */
+
+.hero {
+  padding-block: $section-padding;
+  text-align: center;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 240px;
+  }
+
+  &__text {
+    h1 {
+      font-size: clamp(2.2rem, 3vw, 2.8rem);
+      margin-bottom: 14px;
+    }
+
+    p {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 24px auto;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+/* ========== BLOQUE SERVICIOS HOME ========== */
+
+.home-services {
+  padding: 10px 0 40px;
+
+  h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  &__intro {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+}
+
+/* ========== FORMULARIO DE CONTACTO ========== */
+
+.contact-section {
+  padding-block: $section-padding;
+
+  &__intro {
+    max-width: 640px;
+    margin-bottom: 32px;
+    color: var(--text-muted);
+  }
+
+  &__layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: $gutter * 1.5;
+    align-items: flex-start;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  label {
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-soft);
+    background: rgba(10, 10, 14, 0.9);
+    color: var(--text);
+    font: inherit;
+
+    &:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 1px;
+    }
+  }
+
+  textarea {
+    min-height: 130px;
+    resize: vertical;
+  }
+
+  &__actions {
+    margin-top: 6px;
+  }
+}
