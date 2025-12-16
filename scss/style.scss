@@ -1,12 +1,22 @@
-@use "/utilities/mixins";
-@use "/utilities/extendt";
-@use "/base/variables";
-@use "/base/generales";
-@use "/base/queries";
-@use "/components/header";
-@use "/components/footer";
-@use "/sections/main";
-@use "/pages/servicios";
-@use "/pages/sobremi";
-@use "/pages/trabajos";
-@use "/pages/contacto";
+
+@use "utilities/mixins";
+@use "utilities/extends";
+
+
+@use "base/variables";
+@use "base/general";
+@use "base/queries";
+
+@use "components/header";
+@use "components/footer";
+@use "components/buttons";
+@use "components/cards";
+
+
+@use "sections/main";
+
+
+@use "pages/servicios";
+@use "pages/sobremi";
+@use "pages/trabajos";
+@use "pages/contacto";

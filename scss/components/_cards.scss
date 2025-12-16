@@ -1,0 +1,44 @@
+@use "../utilities/mixins" as m;
+
+.card {
+@include m.soft-card;
+padding: 18px;
+overflow: hidden;
+transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+
+&:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    border-color: rgba(215, 38, 61, 0.45);
+}
+
+&__image-wrapper {
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+&__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    transition: transform .45s ease;
+}
+
+&:hover &__image {
+    transform: scale(1.08);
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+}

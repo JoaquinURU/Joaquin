@@ -1,14 +1,11 @@
-@use "../utilities/mixins";
-@use "../base/variables";
+@use "../utilities/mixins" as m;
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 20;
-  backdrop-filter: blur(10px);
-  background: rgba(10, 10, 14, 0.85);
-  border-bottom: 1px solid var(--border-soft);
   width: 100%;
+  @include m.glass;
 }
 
 .nav {
@@ -16,35 +13,65 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+}
 
-  &__brand {
-    padding: 6px 12px;
-    border-radius: 999px;
-    border: 1px solid var(--border-soft);
-    background: rgba(255, 255, 255, 0.03);
-    font-weight: 700;
-  }
+.nav__brand a {
+  font-weight: 800;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: rgba(255, 255, 255, 0.03);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
 
-  &__list {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
+.nav__toggle {
+  display: none;
+  border: 1px solid var(--border-soft);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+}
 
-  &__link {
-    color: var(--text-muted);
-    padding: 6px 12px;
-    border-radius: 999px;
-    transition: .2s;
+.nav__toggle span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: var(--text);
+  border-radius: 3px;
+  margin: 5px 0;
+}
 
-    &:hover {
-      background: rgba(255,255,255,0.06);
-      color: var(--text);
-    }
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
 
-    &--active {
-      background: var(--accent);
-      color: #fff;
-    }
-  }
+.nav__link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: .2s ease;
+}
+
+.nav__link:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.nav__link--active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.nav__link:focus-visible,
+.nav__toggle:focus-visible {
+  @include m.focus-ring;
 }

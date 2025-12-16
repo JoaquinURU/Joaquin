@@ -1,78 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sobre mí | red.agenciacreativa</title>
-    <meta name="description" content="Conocé a Florencia Codesal, la persona detrás de red.agenciacreativa.">
-    <link rel="stylesheet" href="../assets/css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre mí | red.agenciacreativa</title>
+  <meta name="description" content="Conocé quién está detrás de red.agenciacreativa y cómo trabajo la estrategia y el contenido." />
+  <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 
 <body>
-
-    <header class="site-header">
-        <div class="container">
-            <nav class="nav">
-                <div class="nav__brand">
-                    <a href="../index.html">red.agenciacreativa</a>
-                </div>
-
-                <ul class="nav__list">
-                    <li><a class="nav__link" href="../index.html">Inicio</a></li>
-                    <li><a class="nav__link nav__link--active" href="sobremi.html">Sobre mí</a></li>
-                    <li><a class="nav__link" href="servicios.html">Servicios</a></li>
-                    <li><a class="nav__link" href="trabajos.html">Trabajos</a></li>
-                    <li><a class="nav__link" href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Navegación principal">
+        <div class="nav__brand">
+          <a href="../index.html">red.agenciacreativa</a>
         </div>
-    </header>
 
-    <main class="site-main">
-        <section class="hero">
-            <div class="container hero__content">
-                <h1>Hola, soy Florencia Codesal</h1>
-                <p>
-                    Especialista en comunicación y marketing digital para marcas pequeñas
-                    que quieren verse profesionales sin perder lo humano.
-                </p>
-            </div>
-        </section>
+        <button class="nav__toggle" type="button" aria-label="Abrir menú"
+          aria-controls="nav-list" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
 
-        <section class="home-services">
-            <div class="container">
-                <h2>Mi forma de trabajar</h2>
-                <p class="home-services__intro">
-                    Busco que tu comunicación sea clara, coherente y sostenible en el tiempo.
-                </p>
+        <ul class="nav__list" id="nav-list">
+          <li><a class="nav__link" href="../index.html">Inicio</a></li>
+          <li><a class="nav__link nav__link--active" href="sobremi.html">Sobre mí</a></li>
+          <li><a class="nav__link" href="servicios.html">Servicios</a></li>
+          <li><a class="nav__link" href="trabajos.html">Trabajos</a></li>
+          <li><a class="nav__link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-                <div class="grid grid--3">
-                    <article class="card">
-                        <h3>Simple</h3>
-                        <p>Estrategias explicadas en lenguaje claro, sin tecnicismos innecesarios.</p>
-                    </article>
+  <main class="site-main">
+    <section class="page">
+      <div class="container">
+        <h1 class="page__title">Sobre mí</h1>
+        <p class="page__lead">
+          Acá presento quién soy, cómo trabajo y qué podés esperar si armamos algo juntos.
+        </p>
 
-                    <article class="card">
-                        <h3>Humana</h3>
-                        <p>Escucho tu contexto, tus tiempos y recursos para decidir juntas qué es posible.</p>
-                    </article>
+        <div class="about">
+          <div class="card">
+            <h2>Mi enfoque</h2>
+            <p>
+              Me gusta lo simple: estrategia clara, piezas prolijas, y un sistema de contenido que puedas sostener.
+              Menos improvisación, más intención.
+            </p>
+          </div>
 
-                    <article class="card">
-                        <h3>Accionable</h3>
-                        <p>Cada entrega termina en pasos concretos: qué publicar, qué mejorar y cómo medir.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <p>© 2025 · red.agenciacreativa · Florencia Codesal</p>
+          <div class="card" style="margin-top: 18px;">
+            <h2>Cómo trabajo</h2>
+            <p>
+              Diagnóstico → propuesta → ejecución → ajustes según métricas y feedback.
+              Siempre buscando que tu marca se vea coherente y venda sin volverte loco.
+            </p>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> red.agenciacreativa</p>
+    </div>
+  </footer>
+
+  
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>

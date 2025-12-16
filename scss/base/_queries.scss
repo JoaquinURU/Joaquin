@@ -1,62 +1,26 @@
-// NAV responsive + hero + grids usando los mixins
-
-@include respond(tablet) {
-  .nav {
-    &__toggle {
-      display: flex;
-    }
-
-    &__list {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      margin-top: 10px;
-      padding: 10px 0;
-      border-top: 1px solid var(--border-soft);
-
-      &.active {
-        display: flex;
-      }
-    }
-
-    &__link {
-      padding: 10px;
-    }
-  }
-
-  .contact-section__layout {
-    grid-template-columns: 1fr; // formulario a una columna en tablet
-  }
+@media (max-width: 900px) {
+  .grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-@include respond(mobile) {
-  .hero {
-    padding-block: 40px;
+@media (max-width: 750px) {
+  .nav__toggle { display: block; }
 
-    &__text {
-      h1 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 0.95rem;
-      }
-    }
-
-    &__actions {
-      flex-direction: column;
-    }
+  .nav__list {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    padding: 14px 20px;
+    background: rgba(10, 10, 14, 0.95);
+    border-bottom: 1px solid var(--border-soft);
+    flex-direction: column;
+    gap: 8px;
   }
 
-  .grid--3 {
-    grid-template-columns: 1fr;
-  }
+  .nav__list.is-open { display: flex; }
 
-  .container {
-    padding-inline: 16px;
-  }
-}
+  .grid--3 { grid-template-columns: 1fr; }
 
-@include respond(desktop) {
-
+  .container { padding: 16px; }
 }
