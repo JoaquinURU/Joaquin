@@ -24,8 +24,7 @@ html, body {
 }
 
 body {
-  background: radial-gradient(900px 500px at 85% 0%, var(--accent-soft) 0%, transparent 60%), linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
-  color: var(--text);
+  background: radial-gradient(900px 500px at 85% 0%, rgba(215, 38, 61, 0.25) 0%, transparent 60%), linear-gradient(180deg, 0%, #1d3557 100%);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   line-height: 1.5;
   overflow-x: hidden;
@@ -65,8 +64,28 @@ a {
 }
 
 .page__lead {
-  color: var(--text-muted);
   max-width: 720px;
+}
+
+.nav__link i {
+  margin-right: 8px;
+  opacity: 0.9;
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+.card__tag {
+  margin: 6px 0 10px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card__tag i {
+  color: #e63946;
 }
 
 @media (max-width: 900px) {
@@ -74,30 +93,19 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-@media (max-width: 750px) {
-  .nav__toggle {
-    display: block;
-  }
-  .nav__list {
-    display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    padding: 14px 20px;
-    background: rgba(10, 10, 14, 0.95);
-    border-bottom: 1px solid var(--border-soft);
-    flex-direction: column;
-    gap: 8px;
-  }
-  .nav__list.is-open {
-    display: flex;
-  }
+@media (max-width: 650px) {
   .grid--3 {
     grid-template-columns: 1fr;
   }
-  .container {
-    padding: 16px;
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .nav__list {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
   }
 }
 .site-header {

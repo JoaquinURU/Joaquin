@@ -1,19 +1,19 @@
+@use "../utilities/maps" as *;
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html, body { height: 100%; }
 
 body {
   background:
-    radial-gradient(900px 500px at 85% 0%, var(--accent-soft) 0%, transparent 60%),
-    linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
-  color: var(--text);
+    radial-gradient(900px 500px at 85% 0%, rgba(215, 38, 61, 0.25) 0%, transparent 60%),
+    linear-gradient(180deg, map-get($colors,background) 0%, map-get($colors, secondary) 100%);
+  color: map-get($colors, text);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   line-height: 1.5;
   overflow-x: hidden;
 }
 
 img { max-width: 100%; display: block; }
-
 a { color: inherit; }
 
 .container {
@@ -22,18 +22,10 @@ a { color: inherit; }
   padding: 20px;
 }
 
-.grid {
-  display: grid;
-  gap: 20px;
-}
+.grid { display: grid; gap: 20px; }
+.grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
-.grid--3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.page {
-  padding: 50px 0;
-}
+.page { padding: 50px 0; }
 
 .page__title {
   font-size: clamp(1.8rem, 2.8vw, 2.4rem);
@@ -41,6 +33,28 @@ a { color: inherit; }
 }
 
 .page__lead {
-  color: var(--text-muted);
+  color: map-get($colors, muted);
   max-width: 720px;
+}
+
+.nav__link i {
+  margin-right: 8px;
+  opacity: 0.9;
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+.card__tag {
+  margin: 6px 0 10px;
+  color: map-get($colors, muted);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card__tag i {
+  color: map-get($colors, primary);
 }

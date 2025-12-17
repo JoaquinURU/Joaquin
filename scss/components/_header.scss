@@ -1,77 +1,46 @@
 @use "../utilities/mixins" as m;
 
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
   width: 100%;
-  @include m.glass;
+  padding: 16px 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
 }
 
-.nav {
+.site-header__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
 }
 
-.nav__brand a {
-  font-weight: 800;
-  text-decoration: none;
-  padding: 6px 12px;
-  border-radius: 999px;
-  border: 1px solid var(--border-soft);
-  background: rgba(255, 255, 255, 0.03);
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
 
-.nav__toggle {
-  display: none;
-  border: 1px solid var(--border-soft);
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 12px;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.nav__toggle span {
+.site-header__logo img {
+  height: 40px;
+  width: auto;
   display: block;
-  width: 26px;
-  height: 3px;
-  background: var(--text);
-  border-radius: 3px;
-  margin: 5px 0;
 }
 
-.nav__list {
-  list-style: none;
+
+.site-nav__list {
   display: flex;
-  gap: 18px;
-  align-items: center;
+  gap: 16px;
+  list-style: none;
 }
 
-.nav__link {
-  color: var(--text-muted);
-  text-decoration: none;
-  font-weight: 600;
+.site-nav__list a {
   padding: 8px 14px;
-  border-radius: 999px;
-  transition: .2s ease;
-}
-
-.nav__link:hover {
+  border-radius: 20px;
+  text-decoration: none;
   color: var(--text);
-  background: rgba(255, 255, 255, 0.06);
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
 }
 
-.nav__link--active {
+.site-nav__list a:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.site-nav__list a.active {
   background: var(--accent);
   color: #fff;
-}
-
-.nav__link:focus-visible,
-.nav__toggle:focus-visible {
-  @include m.focus-ring;
 }

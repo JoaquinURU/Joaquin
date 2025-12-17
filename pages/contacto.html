@@ -1,90 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Contacto | red.agenciacreativa</title>
-<meta name="description" content="Contactá para charlar sobre tu marca, tus objetivos y cómo puedo ayudarte." />
-<link rel="stylesheet" href="../assets/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | red.agenciacreativa</title>
+    <meta name="description" content="Contacto: contame sobre tu marca y coordinamos próximos pasos.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-<header class="site-header">
-    <div class="container">
-    <nav class="nav" aria-label="Navegación principal">
-        <div class="nav__brand">
-        <a href="../index.html">red.agenciacreativa</a>
+
+
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav" aria-label="Navegación principal">
+                <a href="../index.html" class="nav__brand">red.agenciacreativa</a>
+
+                <ul class="nav__list">
+                    <li><a href="../index.html" class="nav__link"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    <li><a href="sobremi.html" class="nav__link"><i class="fa-solid fa-user"></i> Sobre mí</a></li>
+                    <li><a href="servicios.html" class="nav__link"><i class="fa-solid fa-briefcase"></i> Servicios</a>
+                    </li>
+                    <li><a href="trabajos.html" class="nav__link"><i class="fa-solid fa-image"></i> Trabajos</a></li>
+                    <li><a href="contacto.html" class="nav__link nav__link--active"><i class="fa-solid fa-envelope"></i>
+                            Contacto</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <button class="nav__toggle" type="button" aria-label="Abrir menú"
-        aria-controls="nav-list" aria-expanded="false">
-        <span></span><span></span><span></span>
-        </button>
 
-        <ul class="nav__list" id="nav-list">
-        <li><a class="nav__link" href="../index.html">Inicio</a></li>
-        <li><a class="nav__link" href="sobremi.html">Sobre mí</a></li>
-        <li><a class="nav__link" href="servicios.html">Servicios</a></li>
-        <li><a class="nav__link" href="trabajos.html">Trabajos</a></li>
-        <li><a class="nav__link nav__link--active" href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-    </div>
-</header>
+    <main class="site-main">
+        <section class="page">
+            <div class="container">
+                <h1 class="page__title"><i class="fa-solid fa-envelope"></i> Contacto</h1>
+                <p class="page__lead">Contame en qué etapa estás y qué te gustaría lograr con tu comunicación.</p>
 
-<main class="site-main">
-    <section class="page">
-    <div class="container">
-        <h1 class="page__title">Hablemos de tu marca</h1>
-        <p class="page__lead">Contame en qué etapa estás y qué te gustaría lograr con tu comunicación digital.</p>
+                <div class="contact">
+                    <div class="contact__box">
+                        <h2 style="margin-bottom: 14px;"><i class="fa-solid fa-paper-plane"></i> Formulario</h2>
 
-        <div class="contact">
-        <div class="contact__box">
-            <h2>Formulario de contacto</h2>
+                        <form class="form" action="#" method="post">
+                            <div class="form__row">
+                                <label for="nombre"><i class="fa-solid fa-user"></i> Nombre</label>
+                                <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+                            </div>
 
-            <form class="form" action="#" method="post">
-            <div class="form__row">
-                <label for="nombre">Nombre</label>
-                <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+                            <div class="form__row">
+                                <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+                                <input id="email" name="email" type="email" placeholder="tuemail@ejemplo.com" required>
+                            </div>
+
+                            <div class="form__row">
+                                <label for="mensaje"><i class="fa-solid fa-message"></i> Mensaje</label>
+                                <textarea id="mensaje" name="mensaje"
+                                    placeholder="Contame qué necesitás (redes, branding, campaña, etc.)"
+                                    required></textarea>
+                            </div>
+
+                            <button class="btn btn--primary" type="submit"><i class="fa-solid fa-paper-plane"></i>
+                                Enviar</button>
+                        </form>
+                    </div>
+
+                    <aside class="contact__box contact__meta" aria-label="Información adicional">
+                        <h2><i class="fa-solid fa-circle-info"></i> Info</h2>
+                        <p><i class="fa-solid fa-location-dot"></i> Montevideo, Uruguay</p>
+                        <p><i class="fa-brands fa-instagram"></i> @red.agenciacreativa</p>
+                        <p><i class="fa-solid fa-clock"></i> Respuesta en 24/48 hs</p>
+                        <p style="margin-top: 10px;">
+                            Si querés, contame rubro, objetivo y si tenés fecha límite.
+                        </p>
+                    </aside>
+                </div>
+
             </div>
+        </section>
+    </main>
 
-            <div class="form__row">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="tunombre@mail.com" required />
-            </div>
 
-            <div class="form__row">
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" placeholder="Contame un poquito sobre tu marca..." required></textarea>
-            </div>
-
-            <button class="btn btn--primary" type="submit">Enviar mensaje</button>
-            </form>
+    <footer class="site-footer">
+        <div class="container">
+            <p><i class="fa-regular fa-copyright"></i> 2025 · red.agenciacreativa</p>
         </div>
+    </footer>
 
-        <aside class="contact__box contact__meta">
-            <h2>¿Qué incluye la primera charla?</h2>
-            <p>✔ Revisamos tu situación actual</p>
-            <p>✔ Definimos un objetivo claro</p>
-            <p>✔ Te recomiendo el servicio ideal para tu etapa</p>
-            <p style="margin-top: 14px; color: var(--text-muted);">
-            Si querés, también podés escribirme por redes y lo coordinamos.
-            </p>
-        </aside>
-        </div>
-    </div>
-    </section>
-</main>
-
-<footer class="site-footer">
-    <div class="container">
-    <p>© <span id="year"></span> red.agenciacreativa</p>
-    </div>
-</footer>
-
-
-<script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-</script>
 </body>
+
 </html>

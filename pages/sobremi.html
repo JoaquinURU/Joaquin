@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Sobre mí | red.agenciacreativa</title>
-  <meta name="description" content="Conocé quién está detrás de red.agenciacreativa y cómo trabajo la estrategia y el contenido." />
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <meta name="description" content="Conocé quién está detrás de red.agenciacreativa y cómo trabajo.">
+
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
+
+  
   <header class="site-header">
     <div class="container">
       <nav class="nav" aria-label="Navegación principal">
-        <div class="nav__brand">
-          <a href="../index.html">red.agenciacreativa</a>
-        </div>
+        <a href="../index.html" class="nav__brand">red.agenciacreativa</a>
 
-        <button class="nav__toggle" type="button" aria-label="Abrir menú"
-          aria-controls="nav-list" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-
-        <ul class="nav__list" id="nav-list">
-          <li><a class="nav__link" href="../index.html">Inicio</a></li>
-          <li><a class="nav__link nav__link--active" href="sobremi.html">Sobre mí</a></li>
-          <li><a class="nav__link" href="servicios.html">Servicios</a></li>
-          <li><a class="nav__link" href="trabajos.html">Trabajos</a></li>
-          <li><a class="nav__link" href="contacto.html">Contacto</a></li>
+        <ul class="nav__list">
+          <li><a href="../index.html" class="nav__link"><i class="fa-solid fa-house"></i> Inicio</a></li>
+          <li><a href="sobremi.html" class="nav__link nav__link--active"><i class="fa-solid fa-user"></i> Sobre mí</a></li>
+          <li><a href="servicios.html" class="nav__link"><i class="fa-solid fa-briefcase"></i> Servicios</a></li>
+          <li><a href="trabajos.html" class="nav__link"><i class="fa-solid fa-image"></i> Trabajos</a></li>
+          <li><a href="contacto.html" class="nav__link"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
         </ul>
       </nav>
     </div>
@@ -35,41 +36,46 @@
   <main class="site-main">
     <section class="page">
       <div class="container">
-        <h1 class="page__title">Sobre mí</h1>
+        <h1 class="page__title"><i class="fa-solid fa-user"></i> Sobre mí</h1>
         <p class="page__lead">
-          Acá presento quién soy, cómo trabajo y qué podés esperar si armamos algo juntos.
+          Trabajo con marcas chicas y emprendimientos que quieren verse más profesionales,
+          ordenar su comunicación y sostener su contenido en el tiempo.
         </p>
 
         <div class="about">
-          <div class="card">
-            <h2>Mi enfoque</h2>
+          <article class="card">
+            <p class="card__tag"><i class="fa-solid fa-diagram-project"></i> Método</p>
+            <h3>Cómo trabajo</h3>
             <p>
-              Me gusta lo simple: estrategia clara, piezas prolijas, y un sistema de contenido que puedas sostener.
-              Menos improvisación, más intención.
+              Bajo ideas a un plan claro: objetivos, pilares, piezas y un calendario realista.
+              Priorizo orden, estética y coherencia.
             </p>
-          </div>
+          </article>
 
-          <div class="card" style="margin-top: 18px;">
-            <h2>Cómo trabajo</h2>
+          <article class="card" style="margin-top: 16px;">
+            <p class="card__tag"><i class="fa-solid fa-circle-check"></i> Resultado</p>
+            <h3>Qué podés esperar</h3>
             <p>
-              Diagnóstico → propuesta → ejecución → ajustes según métricas y feedback.
-              Siempre buscando que tu marca se vea coherente y venda sin volverte loco.
+              Procesos simples, entregables prolijos y una comunicación que se entienda.
+              La idea es crecer con estructura.
             </p>
+          </article>
+
+          <div style="margin-top: 18px;">
+            <a class="btn btn--primary" href="contacto.html"><i class="fa-solid fa-envelope"></i> Hablemos</a>
+            <a class="btn btn--outline" href="servicios.html" style="margin-left: 10px;"><i class="fa-solid fa-briefcase"></i> Ver servicios</a>
           </div>
         </div>
+
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> red.agenciacreativa</p>
+      <p><i class="fa-regular fa-copyright"></i> 2025 · red.agenciacreativa</p>
     </div>
   </footer>
 
-  
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Trabajos | red.agenciacreativa</title>
-  <meta name="description" content="Algunos trabajos y ejemplos de contenido, diseño y campañas." />
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <meta name="description" content="Trabajos y ejemplos de red.agenciacreativa: piezas, campañas y branding.">
+
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
+
+
   <header class="site-header">
     <div class="container">
       <nav class="nav" aria-label="Navegación principal">
-        <div class="nav__brand">
-          <a href="../index.html">red.agenciacreativa</a>
-        </div>
+        <a href="../index.html" class="nav__brand">red.agenciacreativa</a>
 
-        <button class="nav__toggle" type="button" aria-label="Abrir menú"
-          aria-controls="nav-list" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-
-        <ul class="nav__list" id="nav-list">
-          <li><a class="nav__link" href="../index.html">Inicio</a></li>
-          <li><a class="nav__link" href="sobremi.html">Sobre mí</a></li>
-          <li><a class="nav__link" href="servicios.html">Servicios</a></li>
-          <li><a class="nav__link nav__link--active" href="trabajos.html">Trabajos</a></li>
-          <li><a class="nav__link" href="contacto.html">Contacto</a></li>
+        <ul class="nav__list">
+          <li><a href="../index.html" class="nav__link"><i class="fa-solid fa-house"></i> Inicio</a></li>
+          <li><a href="sobremi.html" class="nav__link"><i class="fa-solid fa-user"></i> Sobre mí</a></li>
+          <li><a href="servicios.html" class="nav__link"><i class="fa-solid fa-briefcase"></i> Servicios</a></li>
+          <li><a href="trabajos.html" class="nav__link nav__link--active"><i class="fa-solid fa-image"></i> Trabajos</a></li>
+          <li><a href="contacto.html" class="nav__link"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
         </ul>
       </nav>
     </div>
@@ -35,40 +36,42 @@
   <main class="site-main">
     <section class="page">
       <div class="container">
-        <h1 class="page__title">Trabajos</h1>
-        <p class="page__lead">
-          Esta sección es para mostrar ejemplos. Podés ir agregando capturas, casos o links reales.
-        </p>
+        <h1 class="page__title"><i class="fa-solid fa-image"></i> Trabajos</h1>
+        <p class="page__lead">Ejemplos de lo que puedo hacer (acá podés sumar imágenes reales o links a proyectos).</p>
 
-        <div class="works grid grid--3" style="margin-top: 24px;">
+        <div class="grid grid--3" style="margin-top: 24px;">
           <article class="card">
-            <h3>Proyecto 1</h3>
-            <p>Breve descripción del objetivo, el trabajo realizado y el resultado.</p>
+            <p class="card__tag"><i class="fa-solid fa-pen-nib"></i> Contenido</p>
+            <h3>Pack de contenido</h3>
+            <p>Diseños + copys listos para publicar. Enfoque en coherencia visual y claridad.</p>
           </article>
 
           <article class="card">
-            <h3>Proyecto 2</h3>
-            <p>Contenido, identidad visual, campaña o mejoras del perfil.</p>
+            <p class="card__tag"><i class="fa-solid fa-palette"></i> Branding</p>
+            <h3>Branding Express</h3>
+            <p>Identidad visual rápida: paleta, tipografías y lineamientos para redes.</p>
           </article>
 
           <article class="card">
-            <h3>Proyecto 3</h3>
-            <p>Podés sumar imágenes más adelante dentro de <code>img/</code>.</p>
+            <p class="card__tag"><i class="fa-solid fa-rocket"></i> Campaña</p>
+            <h3>Campaña puntual</h3>
+            <p>Estrategia + piezas para una promo o lanzamiento (posts, stories, reels).</p>
           </article>
+        </div>
+
+        <div style="margin-top: 22px;">
+          <a class="btn btn--primary" href="contacto.html"><i class="fa-solid fa-envelope"></i> Quiero algo así</a>
         </div>
       </div>
     </section>
   </main>
 
+
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> red.agenciacreativa</p>
+      <p><i class="fa-regular fa-copyright"></i> 2025 · red.agenciacreativa</p>
     </div>
   </footer>
 
-  
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
