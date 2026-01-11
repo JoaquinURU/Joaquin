@@ -2,122 +2,198 @@
 <html lang="es">
 <head>
   
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Marketing digital simple, humano y efectivo para emprendedores y marcas chicas.">
-  <meta name="keywords" content="marketing digital, branding, redes sociales, diseño de marca">
-  <meta name="author" content="red.agenciacreativa">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="red.agenciacreativa: marketing digital, branding y contenido para emprendedores y marcas chicas." />
+  <meta name="keywords" content="marketing digital, community manager, branding, diseño, redes sociales, uruguay, montevideo, agencia creativa" />
+  <meta name="author" content="Joaquin" />
 
   <title>Inicio | red.agenciacreativa</title>
 
   
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
-
   
   <header class="site-header">
-    <div class="container site-header__content">
+    <div class="container">
+      <nav class="nav" aria-label="Navegación principal">
+        
+        <a class="brand" href="index.html" aria-label="Ir a inicio">
+          <img class="brand__logo" src="img/Titulo.png" alt="Logo de red.agenciacreativa" />
+          <span>red.agenciacreativa</span>
+        </a>
 
-      
-      <a href="index.html" class="site-header__logo">
-  <img src="img/Titulo.png" alt="Logo de red.agenciacreativa">
-</a>
+        >
+        <input class="nav__toggle" type="checkbox" id="navToggle" aria-label="Abrir menú" />
+        <label class="nav__btn" for="navToggle" aria-label="Menú">
+          <span class="nav__icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+        </label>
 
-
-      
-      <nav class="site-nav" aria-label="Navegación principal">
-        <ul class="site-nav__list">
-          <li><a href="index.html" class="active">Inicio</a></li>
-          <li><a href="pages/sobremi.html">Sobre mí</a></li>
-          <li><a href="pages/servicios.html">Servicios</a></li>
-          <li><a href="pages/trabajos.html">Trabajos</a></li>
-          <li><a href="pages/contacto.html">Contacto</a></li>
+        
+        <ul class="nav__list">
+          <li><a class="nav__link is-active" href="index.html">Inicio</a></li>
+          <li><a class="nav__link" href="pages/sobremi.html">Sobre mí</a></li>
+          <li><a class="nav__link" href="pages/servicios.html">Servicios</a></li>
+          <li><a class="nav__link" href="pages/trabajos.html">Trabajos</a></li>
+          <li><a class="nav__link" href="pages/contacto.html">Contacto</a></li>
         </ul>
       </nav>
-
     </div>
   </header>
 
   
+  
   <main class="site-main">
-
-    
+  
     <section class="hero">
-      <div class="container hero__content">
-        <h1>Marketing digital simple, humano y efectivo.</h1>
-
+      <div class="container">
+        <h1 class="hero__title">Marketing digital simple, humano y efectivo.</h1>
         <p class="hero__lead">
-          Acompaño a emprendedores y marcas chicas a ordenar su comunicación,
-          verse profesionales y vender sin sentir que Instagram es un caos.
+          Acompaño a emprendedores y marcas chicas a ordenar su comunicación: verse profesionales, generar confianza
+          y vender sin sentir que “Instagram es un caos”.
         </p>
 
         <div class="hero__actions">
-          <a href="pages/servicios.html" class="btn btn--primary">Ver servicios</a>
-          <a href="pages/contacto.html" class="btn btn--secondary">Quiero hablar de mi marca</a>
+          <a class="btn btn--primary" href="pages/servicios.html">Ver servicios</a>
+          <a class="btn btn--outline" href="pages/contacto.html">Quiero hablar de mi marca</a>
         </div>
       </div>
     </section>
 
+    
+    <section class="features">
+      <div class="container section__inner">
+        <div>
+          <h2 class="section__title">¿Qué puedo hacer por tu marca?</h2>
+          <p class="section__lead">
+            Trabajo con un enfoque práctico: estrategia + estética + ejecución. Para que no solo se vea lindo, sino que funcione.
+          </p>
+        </div>
 
-    <section class="home-services">
-      <div class="container">
-        <h2>¿En qué te puedo ayudar?</h2>
+        <div class="grid grid--3">
+          <article class="feature">
+            <span class="feature__kicker">Estrategia</span>
+            <h3>Contenido con rumbo</h3>
+            <p>Definimos objetivos, pilares y un sistema simple para publicar sin estrés.</p>
+          </article>
 
-        <p class="section-lead">
-          Servicios pensados para marcas que quieren claridad, estética prolija
-          y contenido que funcione.
-        </p>
+          <article class="feature">
+            <span class="feature__kicker">Branding</span>
+            <h3>Identidad coherente</h3>
+            <p>Tipografías, colores, estilo visual y mensajes consistentes en todas tus piezas.</p>
+          </article>
+
+          <article class="feature">
+            <span class="feature__kicker">Ejecución</span>
+            <h3>Diseño + copies</h3>
+            <p>Creatividades y textos claros: posteos que se entienden, se guardan y convierten.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="container"><div class="divider"></div></div>
+
+  
+    <section class="section">
+      <div class="container section__inner">
+        <div>
+          <h2 class="section__title">Servicios destacados</h2>
+          <p class="section__lead">Elegí una opción rápida o trabajemos algo a medida. El objetivo: resultados + orden + estética profesional.</p>
+        </div>
 
         <div class="grid grid--3">
           <article class="card">
+            <div class="card__media">
+              <img class="card__img" src="img/7.png" alt="Gestión de redes sociales" loading="lazy" />
+            </div>
             <h3>Gestión de redes</h3>
-            <p>
-              Calendario, diseño y copys para que tu contenido tenga coherencia
-              y objetivos claros.
-            </p>
+            <p>Calendario, diseño, copies y seguimiento para crecer con constancia.</p>
           </article>
 
           <article class="card">
+            <div class="card__media">
+              <img class="card__img" src="img/7.png" alt="Branding e identidad visual" loading="lazy" />
+            </div>
             <h3>Branding e identidad</h3>
-            <p>
-              Colores, tipografías y piezas base para comunicar con personalidad
-              en todas las plataformas.
-            </p>
+            <p>Definimos tu look & feel para que tu marca se vea sólida y confiable.</p>
           </article>
 
           <article class="card">
-            <h3>Estrategia digital</h3>
-            <p>
-              Ordenamos ideas, mensajes y acciones para que tu marca crezca con
-              sentido.
-            </p>
+            <div class="card__media">
+              <img class="card__img" src="img/7.png" alt="Diseño de piezas y contenido" loading="lazy" />
+            </div>
+            <h3>Diseño de contenido</h3>
+            <p>Piezas listas para publicar, con estilo consistente y mensajes claros.</p>
           </article>
+        </div>
+
+        <div>
+          <a class="btn btn--primary" href="pages/servicios.html">Ver todos los servicios</a>
         </div>
       </div>
     </section>
 
-  </main>
+    <div class="container"><div class="divider"></div></div>
 
   
+    <section class="about-preview">
+      <div class="container about-preview__grid">
+        <div>
+          <h2 class="section__title">Sobre mí</h2>
+          <p class="section__lead">
+            Me enfoco en que tu comunicación sea clara, humana y profesional. Si hoy tu marca está “desordenada”,
+            armamos un sistema simple para sostenerlo en el tiempo.
+          </p>
+          <div class="hero__actions" style="justify-content:flex-start; margin-top:16px;">
+            <a class="btn btn--outline" href="pages/sobremi.html">Conocer más</a>
+            <a class="btn btn--primary" href="pages/contacto.html">Contactarme</a>
+          </div>
+        </div>
+
+        <aside class="about-preview__box" aria-label="Beneficios del servicio">
+          <h3>Qué te llevás</h3>
+          <ul>
+            <li>Orden y estrategia para publicar con constancia</li>
+            <li>Diseño consistente y profesional</li>
+            <li>Mensajes claros orientados a objetivos</li>
+            <li>Mejor experiencia para tus seguidores</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+
   <footer class="site-footer">
-    <div class="container site-footer__content">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__title">red.agenciacreativa</p>
+          <p class="footer__text">
+            Marketing digital, contenido y branding para emprendedores y marcas chicas.
+            Diseño prolijo, mensajes claros y una estrategia simple de sostener.
+          </p>
+        </div>
 
-      <p>
-        © 2025 red.agenciacreativa · Marketing digital con enfoque humano
-      </p>
+        <div>
+          <p class="footer__title">Secciones</p>
+          <ul class="footer__links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pages/sobremi.html">Sobre mí</a></li>
+            <li><a href="pages/servicios.html">Servicios</a></li>
+            <li><a href="pages/trabajos.html">Trabajos</a></li>
+            <li><a href="pages/contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
 
-      <nav aria-label="Navegación secundaria">
-        <ul class="footer-nav">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="pages/servicios.html">Servicios</a></li>
-          <li><a href="pages/contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-
+      <p class="footer__copy">© 2025 red.agenciacreativa — Proyecto final</p>
     </div>
   </footer>
-
 </body>
 </html>

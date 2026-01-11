@@ -1,18 +1,16 @@
+@use "../utilities/maps" as m;
 :root {
-  --bg-1: #0e0f12;
-  --bg-2: #15171c;
-
-  --accent: #d7263d;
-  --accent-hover: #ff4a5f;
+  --bg-1: #{map-get(m.$colors, background)};
+  --bg-2: #{map-get(m.$colors, secondary)};
+  --accent: #{map-get(m.$colors, accent)};
   --accent-soft: rgba(215, 38, 61, 0.25);
+  --text: #{map-get(m.$colors, text)};
+  --text-muted: #{map-get(m.$colors, muted)};
+  --border-soft: #{map-get(m.$colors, border)};
 
-  --text: #f6f7f8;
-  --text-muted: #c1c3c9;
-  --border-soft: rgba(255, 255, 255, 0.12);
+  --radius-sm: #{map-get(m.$radii, sm)};
+  --radius-md: #{map-get(m.$radii, md)};
+  --radius-lg: #{map-get(m.$radii, lg)};
 
-  --radius-sm: 10px;
-  --radius-md: 16px;
-  --radius-lg: 22px;
-
-  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.55);
+  --shadow-soft: #{map-get(m.$shadows, soft)};
 }

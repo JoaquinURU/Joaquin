@@ -1,6 +1,22 @@
+
 $colors: (
-primary: #e63946,
-secondary: #1d3557,
-light: #f1faee,
-dark: #0b0d17
+  background: #0e0f12,
+  secondary: #15171c,
+  accent: #d7263d,
+  text: #f6f7f8,
+  muted: #c1c3c9,
+  border: rgba(255, 255, 255, 0.12),
+  glass: rgba(10, 10, 14, 0.85),
+  card: rgba(10, 10, 14, 0.92)
+);
+
+$radii: (
+  sm: 10px,
+  md: 16px,
+  lg: 22px
+);
+
+$shadows: (
+  soft: 0 18px 45px rgba(0, 0, 0, 0.55),
+  card: 0 8px 24px rgba(0, 0, 0, 0.45)
 );

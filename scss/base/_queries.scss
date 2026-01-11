@@ -1,11 +1,11 @@
-@media (max-width: 768px) {
-  .site-header__content {
-    flex-direction: column;
-    gap: 12px;
-  }
+@use "../utilities/mixins" as mx;
 
-  .site-nav__list {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+@include mx.mq(900px) {
+  .grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@include mx.mq(650px) {
+  .grid--2 { grid-template-columns: 1fr; }
+  .grid--3 { grid-template-columns: 1fr; }
+  .section { padding: 44px 0; }
 }

@@ -1,32 +1,32 @@
+
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 18px;
+  gap: 10px;
+  padding: 12px 18px;
   border-radius: 999px;
   font-weight: 700;
   font-size: 0.95rem;
-  text-decoration: none;
   cursor: pointer;
-  transition: .2s ease;
-  border: none;
+  transition: 0.2s ease;
+  border: 1px solid transparent;
+
+  &:hover { transform: translateY(-1px); }
 }
 
 .btn--primary {
-  background: var(--accent);
+  background-color: var(--accent);
   color: #fff;
   box-shadow: var(--shadow-soft);
-}
 
-.btn--primary:hover { background: var(--accent-hover); }
+  &:hover { background-color: #ff4a5f; }
+}
 
 .btn--outline {
   background: transparent;
-  border: 1px solid var(--border-soft);
-  color: var(--text-muted);
-}
-
-.btn--outline:hover {
-  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--border-soft);
   color: var(--text);
+
+  &:hover { background-color: rgba(255, 255, 255, 0.06); }
 }
