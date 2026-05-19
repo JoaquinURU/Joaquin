@@ -1,81 +1,316 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  
+
+  <!-- META -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Sobre mí | red.agenciacreativa</title>
-  <meta name="description" content="Conocé quién está detrás de red.agenciacreativa y cómo trabajo.">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
+  <!-- SEO -->
+  <title>
+    Sobre mí | red.agenciacreativa
+  </title>
 
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <meta
+    name="description"
+    content="Conocé más sobre red.agenciacreativa y el enfoque detrás de cada proyecto."
+  >
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta
+    name="keywords"
+    content="marketing digital, branding, community manager, diseño, estrategia"
+  >
+
+  <!-- FONT AWESOME -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="../assets/css/style.css"
+  >
+
 </head>
 
 <body>
 
-  
+  <!-- ========================= -->
+  <!-- HEADER -->
+  <!-- ========================= -->
+
   <header class="site-header">
-    <div class="container">
-      <nav class="nav" aria-label="Navegación principal">
-        <a href="../index.html" class="nav__brand">red.agenciacreativa</a>
+
+    <div class="container nav">
+
+      <!-- LOGO -->
+      <a
+        class="nav__brand"
+        href="../index.html"
+        aria-label="Ir al inicio"
+      >
+
+        <img
+          class="nav__logo"
+          src="../img/Titulo.png"
+          alt="Logo de red.agenciacreativa"
+        >
+
+      </a>
+
+      <!-- MENU MOBILE -->
+      <input
+        class="nav__check"
+        type="checkbox"
+        id="menu"
+      >
+
+      <label
+        class="nav__toggle"
+        for="menu"
+        aria-label="Abrir menú"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </label>
+
+      <!-- NAVEGACION -->
+      <nav
+        class="nav__menu"
+        aria-label="Navegación principal"
+      >
 
         <ul class="nav__list">
-          <li><a href="../index.html" class="nav__link"><i class="fa-solid fa-house"></i> Inicio</a></li>
-          <li><a href="sobremi.html" class="nav__link nav__link--active"><i class="fa-solid fa-user"></i> Sobre mí</a></li>
-          <li><a href="servicios.html" class="nav__link"><i class="fa-solid fa-briefcase"></i> Servicios</a></li>
-          <li><a href="trabajos.html" class="nav__link"><i class="fa-solid fa-image"></i> Trabajos</a></li>
-          <li><a href="contacto.html" class="nav__link"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+
+          <li>
+
+            <a
+              class="nav__link"
+              href="../index.html"
+            >
+
+              <i class="fa-solid fa-house"></i>
+
+              Inicio
+
+            </a>
+
+          </li>
+
+          <li>
+
+            <a
+              class="nav__link nav__link--active"
+              href="sobremi.html"
+            >
+
+              <i class="fa-solid fa-user"></i>
+
+              Sobre mí
+
+            </a>
+
+          </li>
+
+          <li>
+
+            <a
+              class="nav__link"
+              href="servicios.html"
+            >
+
+              <i class="fa-solid fa-briefcase"></i>
+
+              Servicios
+
+            </a>
+
+          </li>
+
+          <li>
+
+            <a
+              class="nav__link"
+              href="trabajos.html"
+            >
+
+              <i class="fa-solid fa-image"></i>
+
+              Trabajos
+
+            </a>
+
+          </li>
+
+          <li>
+
+            <a
+              class="nav__link"
+              href="contacto.html"
+            >
+
+              <i class="fa-solid fa-envelope"></i>
+
+              Contacto
+
+            </a>
+
+          </li>
+
         </ul>
+
       </nav>
+
     </div>
+
   </header>
 
+  <!-- ========================= -->
+  <!-- MAIN -->
+  <!-- ========================= -->
+
   <main class="site-main">
-    <section class="page">
+
+    <!-- HERO -->
+
+    <section class="page-hero">
+
       <div class="container">
-        <h1 class="page__title"><i class="fa-solid fa-user"></i> Sobre mí</h1>
-        <p class="page__lead">
-          Trabajo con marcas chicas y emprendimientos que quieren verse más profesionales,
-          ordenar su comunicación y sostener su contenido en el tiempo.
+
+        <h1 class="page-hero__title">
+          Sobre mí
+        </h1>
+
+        <p class="page-hero__text">
+          Detrás de red.agenciacreativa hay una mirada humana,
+          estratégica y enfocada en ayudar a marcas a comunicar
+          con claridad.
         </p>
 
-        <div class="about">
-          <article class="card">
-            <p class="card__tag"><i class="fa-solid fa-diagram-project"></i> Método</p>
-            <h3>Cómo trabajo</h3>
-            <p>
-              Bajo ideas a un plan claro: objetivos, pilares, piezas y un calendario realista.
-              Priorizo orden, estética y coherencia.
+      </div>
+
+    </section>
+
+    <!-- SOBRE MI -->
+
+    <section class="about section">
+
+      <div class="container about__grid">
+
+        <!-- TEXTO -->
+
+        <div class="about__content">
+
+          <h2 class="section__title">
+            Comunicación con estrategia y cercanía
+          </h2>
+
+          <p class="about__text">
+            Trabajo acompañando emprendedores y marcas que necesitan
+            ordenar su comunicación digital, mejorar su presencia en redes
+            y construir una identidad más profesional.
+          </p>
+
+          <p class="about__text">
+            Mi enfoque combina estrategia, diseño y contenido,
+            buscando que cada marca pueda comunicar de manera clara,
+            coherente y cercana.
+          </p>
+
+          <p class="about__text">
+            Más allá de las redes sociales, creo en la importancia
+            de construir experiencias y mensajes que conecten
+            realmente con las personas.
+          </p>
+
+        </div>
+
+        <!-- CARDS -->
+
+        <div class="about__cards">
+
+          <article class="mini-card">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            <h3>
+              Estrategia
+            </h3>
+
+            <p class="muted">
+              Cada acción tiene un objetivo claro y pensado para la marca.
             </p>
+
           </article>
 
-          <article class="card" style="margin-top: 16px;">
-            <p class="card__tag"><i class="fa-solid fa-circle-check"></i> Resultado</p>
-            <h3>Qué podés esperar</h3>
-            <p>
-              Procesos simples, entregables prolijos y una comunicación que se entienda.
-              La idea es crecer con estructura.
+          <article class="mini-card">
+
+            <i class="fa-solid fa-palette"></i>
+
+            <h3>
+              Diseño
+            </h3>
+
+            <p class="muted">
+              La estética y la identidad visual también comunican.
             </p>
+
           </article>
 
-          <div style="margin-top: 18px;">
-            <a class="btn btn--primary" href="contacto.html"><i class="fa-solid fa-envelope"></i> Hablemos</a>
-            <a class="btn btn--outline" href="servicios.html" style="margin-left: 10px;"><i class="fa-solid fa-briefcase"></i> Ver servicios</a>
-          </div>
+          <article class="mini-card">
+
+            <i class="fa-solid fa-comments"></i>
+
+            <h3>
+              Comunicación
+            </h3>
+
+            <p class="muted">
+              Mensajes claros, humanos y alineados con cada proyecto.
+            </p>
+
+          </article>
+
         </div>
 
       </div>
+
     </section>
+
   </main>
 
+  <!-- ========================= -->
+  <!-- FOOTER -->
+  <!-- ========================= -->
+
   <footer class="site-footer">
-    <div class="container">
-      <p><i class="fa-regular fa-copyright"></i> 2025 · red.agenciacreativa</p>
+
+    <div class="container footer">
+
+      <p>
+        <strong>
+          red.agenciacreativa
+        </strong>
+      </p>
+
+      <p class="muted">
+        Montevideo, Uruguay · 2026
+      </p>
+
     </div>
+
   </footer>
 
 </body>
+
 </html>

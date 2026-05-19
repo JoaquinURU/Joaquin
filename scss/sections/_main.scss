@@ -1,5 +1,131 @@
+.hero {
+  padding: 70px 0 40px;
+  text-align: center;
+
+  &__content {
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: clamp(2.1rem, 3.2vw, 3rem);
+    margin-bottom: 14px;
+  }
+
+  p {
+    color: var(--text-muted);
+    max-width: 680px;
+    margin: 0 auto 24px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+}
+
+.section {
+  padding: 50px 0;
+
+  &__title {
+    font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+    margin-bottom: 10px;
+  }
+
+  &__lead {
+    color: var(--text-muted);
+    max-width: 720px;
+    margin-bottom: 24px;
+  }
+}
+
+.dynamic-services {
+  padding-top: 30px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.filter-btn {
+
+  &.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+
+}
+
+.search-box {
+  margin-bottom: 18px;
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    font-weight: 700;
+  }
+
+  input {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,.1);
+    background: rgba(255,255,255,.04);
+    color: var(--text);
+    outline: none;
+  }
+}
+
+.services-counter {
+  color: var(--text-muted);
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__icon {
+    font-size: 2rem;
+  }
+
+  &__category {
+    color: var(--accent);
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    margin-top: auto;
+    align-self: flex-start;
+  }
+}
+
+.service-detail {
+  margin-top: 24px;
+
+  &__category {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
 .recommender {
-  padding: 40px 0;
 
   &__options {
     display: flex;
@@ -8,23 +134,13 @@
     margin: 20px 0;
   }
 
-  &__btn {
-    cursor: pointer;
-    transition: 0.2s ease;
+}
+
+@media (max-width: 650px) {
+
+  .filters,
+  .recommender__options {
+    flex-direction: column;
   }
 
-  &__btn.active {
-    background: var(--accent);
-    color: #fff;
-    border-color: var(--accent);
-  }
-
-  &__result {
-    margin-top: 20px;
-  }
-
-  &__message {
-    color: var(--text-muted);
-    font-size: 1rem;
-  }
 }
