@@ -1,66 +1,91 @@
-console.log("JavaScript conectado 🚀");
+// ===============================
+// RED AGENCIA CREATIVA
+// DOM + EVENTOS + ASINCRONISMO
+// ===============================
+
+console.log("JavaScript conectado correctamente 🚀");
+
+// ===============================
+// DATOS: ARRAY DE OBJETOS
+// ===============================
 
 const servicios = [
   {
     id: 1,
     nombre: "Gestión de redes",
     categoria: "Marketing",
-    descripcion: "Calendario, estrategia y contenido.",
-    detalle: "Ideal para ordenar tu comunicación y publicar con constancia.",
+    descripcion: "Calendario, diseño y estrategia para redes sociales.",
+    detalle: "Ideal para marcas que necesitan ordenar su comunicación mensual, publicar con constancia y mantener una estética coherente.",
     icono: "📱",
     link: "pages/servicios.html"
   },
-
   {
     id: 2,
     nombre: "Branding e identidad",
     categoria: "Identidad visual",
-    descripcion: "Diseño visual coherente.",
-    detalle: "Colores, tipografías y estética para tu marca.",
+    descripcion: "Diseño visual coherente para que tu marca se vea profesional.",
+    detalle: "Recomendado para marcas que necesitan definir colores, tipografías, estilo visual y piezas base para comunicar con claridad.",
     icono: "🎨",
     link: "pages/servicios.html"
   },
-
   {
     id: 3,
     nombre: "Impulso digital",
     categoria: "Estrategia",
-    descripcion: "Optimización de perfil y contenido.",
-    detalle: "Pensado para marcas que quieren crecer digitalmente.",
+    descripcion: "Optimización de contenido, perfil y conversión.",
+    detalle: "Pensado para marcas que ya tienen presencia digital, pero necesitan mejorar su perfil, llamados a la acción y estrategia de contenido.",
     icono: "🚀",
     link: "pages/servicios.html"
+  },
+  {
+    id: 4,
+    nombre: "Asesoría personalizada",
+    categoria: "Estrategia",
+    descripcion: "Sesiones 1:1 para ordenar tu comunicación y definir próximos pasos.",
+    detalle: "Una instancia personalizada para revisar tu caso, detectar oportunidades y definir un plan de acción concreto.",
+    icono: "💡",
+    link: "pages/contacto.html"
+  },
+  {
+    id: 5,
+    nombre: "Diseño de piezas",
+    categoria: "Identidad visual",
+    descripcion: "Piezas gráficas claras, prolijas y alineadas a tu marca.",
+    detalle: "Perfecto para marcas que necesitan posts, historias, banners o piezas visuales puntuales con una estética consistente.",
+    icono: "🖼️",
+    link: "pages/trabajos.html"
   }
 ];
 
+// ===============================
+// SELECTORES DOM
+// ===============================
+
 const contenedorServicios = document.getElementById("servicios-dinamicos");
-
 const botonesFiltro = document.querySelectorAll(".filter-btn");
-
 const buscadorServicios = document.getElementById("buscador-servicios");
-
 const contadorServicios = document.getElementById("contador-servicios");
 
 const detalleServicio = document.getElementById("detalle-servicio");
-
 const detalleTitulo = document.getElementById("detalle-titulo");
-
 const detalleCategoria = document.getElementById("detalle-categoria");
-
 const detalleDescripcion = document.getElementById("detalle-descripcion");
-
 const detalleLink = document.getElementById("detalle-link");
 
 const botonesRecomendador = document.querySelectorAll(".recommender__btn");
-
 const mensajeRecomendador = document.getElementById("mensaje-js");
 
+// Variable para poder cancelar cargas anteriores
+let temporizadorDetalle = null;
+
+// ===============================
+// FUNCIONES: SERVICIOS DINÁMICOS
+// ===============================
+
 const crearCardServicio = (servicio) => {
-
   return `
-
     <article class="card service-card">
-
-      <div class="service-card__icon">
+      <div class="service-card__icon" aria-hidden="true">
         ${servicio.icono}
       </div>
 
@@ -76,199 +101,240 @@ const crearCardServicio = (servicio) => {
         ${servicio.descripcion}
       </p>
 
-      <button
-        class="btn btn--outline service-card__button"
-        data-id="${servicio.id}"
-        type="button"
-      >
+      <button class="btn btn--outline service-card__button" data-id="${servicio.id}" type="button">
         Ver detalle
       </button>
-
     </article>
-
   `;
 };
 
 const actualizarContador = (cantidad) => {
+  if (!contadorServicios) return;
 
-  contadorServicios.textContent =
-    `Servicios disponibles: ${cantidad}`;
-
+  contadorServicios.textContent = `Servicios disponibles: ${cantidad}`;
 };
 
 const mostrarServicios = (listaServicios) => {
+  if (!contenedorServicios) return;
 
-  contenedorServicios.innerHTML =
-    listaServicios
-      .map((servicio) => crearCardServicio(servicio))
-      .join("");
+  contenedorServicios.innerHTML = listaServicios
+    .map((servicio) => crearCardServicio(servicio))
+    .join("");
 
   actualizarContador(listaServicios.length);
-
 };
 
-mostrarServicios(servicios);
-
 const filtrarPorCategoria = (categoria) => {
-
   if (categoria === "todos") {
     return servicios;
   }
 
-  return servicios.filter((servicio) => {
-    return servicio.categoria === categoria;
-  });
-
+  return servicios.filter((servicio) => servicio.categoria === categoria);
 };
 
 const buscarServicios = (texto, listaBase) => {
-
-  const busqueda = texto.toLowerCase();
+  const busqueda = texto.toLowerCase().trim();
 
   return listaBase.filter((servicio) => {
-
     return (
-      servicio.nombre.toLowerCase().includes(busqueda)
+      servicio.nombre.toLowerCase().includes(busqueda) ||
+      servicio.descripcion.toLowerCase().includes(busqueda) ||
+      servicio.categoria.toLowerCase().includes(busqueda)
     );
-
   });
-
 };
 
 const obtenerCategoriaActiva = () => {
+  const botonActivo = document.querySelector(".filter-btn.active");
 
-  const botonActivo =
-    document.querySelector(".filter-btn.active");
+  if (!botonActivo) {
+    return "todos";
+  }
 
   return botonActivo.dataset.category;
-
 };
 
 const aplicarFiltros = () => {
+  const categoriaActiva = obtenerCategoriaActiva();
+  const textoBuscado = buscadorServicios ? buscadorServicios.value : "";
 
-  const categoriaActiva =
-    obtenerCategoriaActiva();
-
-  const textoBuscado =
-    buscadorServicios.value;
-
-  const serviciosFiltrados =
-    buscarServicios(
-      textoBuscado,
-      filtrarPorCategoria(categoriaActiva)
-    );
+  const serviciosPorCategoria = filtrarPorCategoria(categoriaActiva);
+  const serviciosFiltrados = buscarServicios(textoBuscado, serviciosPorCategoria);
 
   mostrarServicios(serviciosFiltrados);
-
 };
 
-botonesFiltro.forEach((boton) => {
-
-  boton.addEventListener("click", () => {
-
-    botonesFiltro.forEach((btn) => {
-      btn.classList.remove("active");
-    });
-
-    boton.classList.add("active");
-
-    aplicarFiltros();
-
-  });
-
-});
-
-buscadorServicios.addEventListener("input", () => {
-
-  aplicarFiltros();
-
-});
-
+// ===============================
+// DOM + ASINCRONISMO: DETALLE DE SERVICIO
+// ===============================
 
 const buscarServicioPorId = (id) => {
+  return servicios.find((servicio) => servicio.id === Number(id));
+};
 
-  return servicios.find((servicio) => {
-    return servicio.id === Number(id);
-  });
+const mostrarEstadoCarga = () => {
+  if (!detalleServicio) return;
 
+  detalleTitulo.textContent = "Cargando...";
+  detalleCategoria.textContent = "";
+  detalleDescripcion.textContent = "Obteniendo información del servicio...";
+  detalleLink.setAttribute("href", "#");
+
+  detalleServicio.classList.remove("hidden");
+};
+
+const mostrarDetalleFinal = (servicio) => {
+  if (!detalleServicio || !servicio) return;
+
+  detalleTitulo.textContent = servicio.nombre;
+  detalleCategoria.textContent = servicio.categoria;
+  detalleDescripcion.textContent = servicio.detalle;
+  detalleLink.setAttribute("href", servicio.link);
+
+  detalleServicio.classList.remove("hidden");
 };
 
 const mostrarDetalleServicio = (servicio) => {
+  if (!servicio) return;
 
-  detalleTitulo.textContent =
-    servicio.nombre;
+  // Si había una carga anterior pendiente, la cancelamos
+  if (temporizadorDetalle) {
+    clearTimeout(temporizadorDetalle);
+  }
 
-  detalleCategoria.textContent =
-    servicio.categoria;
+  // Primero mostramos un estado de carga
+  mostrarEstadoCarga();
 
-  detalleDescripcion.textContent =
-    servicio.detalle;
-
-  detalleLink.setAttribute(
-    "href",
-    servicio.link
-  );
-
-  detalleServicio.classList.remove("hidden");
-
+  // Simulamos una petición asíncrona con setTimeout
+  temporizadorDetalle = setTimeout(() => {
+    mostrarDetalleFinal(servicio);
+  }, 1200);
 };
 
+// Delegación de eventos en lista dinámica
+if (contenedorServicios) {
+  contenedorServicios.addEventListener("click", (event) => {
+    const botonDetalle = event.target.closest(".service-card__button");
 
-contenedorServicios.addEventListener("click", (event) => {
+    if (!botonDetalle) return;
 
-  const botonDetalle =
-    event.target.closest(".service-card__button");
+    const idServicio = botonDetalle.dataset.id;
+    const servicioElegido = buscarServicioPorId(idServicio);
 
-  if (!botonDetalle) return;
+    mostrarDetalleServicio(servicioElegido);
+  });
+}
 
-  const idServicio =
-    botonDetalle.dataset.id;
+// ===============================
+// EVENTOS: FILTROS Y BUSCADOR
+// ===============================
 
-  const servicioElegido =
-    buscarServicioPorId(idServicio);
+if (contenedorServicios) {
+  mostrarServicios(servicios);
+}
 
-  mostrarDetalleServicio(servicioElegido);
+if (botonesFiltro.length > 0) {
+  botonesFiltro.forEach((boton) => {
+    boton.addEventListener("click", () => {
+      botonesFiltro.forEach((btn) => btn.classList.remove("active"));
+      boton.classList.add("active");
 
-});
+      aplicarFiltros();
 
+      if (detalleServicio) {
+        detalleServicio.classList.add("hidden");
+      }
+    });
+  });
+}
 
+if (buscadorServicios) {
+  buscadorServicios.addEventListener("input", () => {
+    aplicarFiltros();
+
+    if (detalleServicio) {
+      detalleServicio.classList.add("hidden");
+    }
+  });
+}
+
+// ===============================
+// REDUCE: TOTAL DE SERVICIOS
+// ===============================
+
+const totalServicios = servicios.reduce((acumulador) => {
+  return acumulador + 1;
+}, 0);
+
+console.log("Cantidad total de servicios:", totalServicios);
+
+// ===============================
+// RECOMENDADOR DE SERVICIOS
+// ===============================
 
 const recomendaciones = {
-
-  redes:
-    "Te recomiendo Gestión de Redes.",
-
-  branding:
-    "Te recomiendo Branding e Identidad.",
-
-  impulso:
-    "Te recomiendo Impulso Digital."
-
+  redes: {
+    nombre: "Gestión de redes",
+    descripcion: "Te recomiendo empezar por Gestión de Redes: te va a ayudar a ordenar ideas, definir pilares y publicar con más claridad."
+  },
+  branding: {
+    nombre: "Branding e identidad",
+    descripcion: "Te recomiendo empezar por Branding e Identidad: es clave para que tu marca se vea consistente y profesional."
+  },
+  impulso: {
+    nombre: "Impulso digital",
+    descripcion: "Te recomiendo Impulso Digital: ideal si ya tenés una base, pero querés mejorar perfil, contenido y conversión."
+  },
+  asesoria: {
+    nombre: "Asesoría 1:1",
+    descripcion: "Te recomiendo una Asesoría 1:1: analizamos tu caso puntual y definimos el mejor camino para tu marca."
+  }
 };
 
-botonesRecomendador.forEach((boton) => {
+const obtenerRecomendacion = (servicio = "redes") => {
+  return recomendaciones[servicio] || {
+    nombre: "Recomendación",
+    descripcion: "Elegí una opción para recibir una recomendación personalizada."
+  };
+};
 
-  boton.addEventListener("click", () => {
-
-    const servicio =
-      boton.dataset.service;
-
-    mensajeRecomendador.textContent =
-      recomendaciones[servicio];
-
+const activarBotonRecomendador = (botonSeleccionado) => {
+  botonesRecomendador.forEach((boton) => {
+    boton.classList.remove("active");
   });
 
-});
+  botonSeleccionado.classList.add("active");
+};
+
+const mostrarRecomendacion = (recomendacion) => {
+  if (!mensajeRecomendador) return;
+
+  mensajeRecomendador.innerHTML = `
+    <strong>${recomendacion.nombre}</strong><br>
+    ${recomendacion.descripcion}
+  `;
+};
+
+const manejarClickRecomendador = (boton) => {
+  const servicioElegido = boton.dataset.service;
+  const recomendacion = obtenerRecomendacion(servicioElegido);
+
+  activarBotonRecomendador(boton);
+  mostrarRecomendacion(recomendacion);
+};
+
+if (botonesRecomendador.length > 0 && mensajeRecomendador) {
+  botonesRecomendador.forEach((boton) => {
+    boton.addEventListener("click", () => {
+      manejarClickRecomendador(boton);
+    });
+  });
+}
 
 // ===============================
-// REDUCE
+// ASINCRONISMO: MENSAJE DIFERIDO EN CONSOLA
 // ===============================
 
-const totalServicios =
-  servicios.reduce((acc) => {
-
-    return acc + 1;
-
-  }, 0);
-
-console.log(totalServicios);
+setTimeout(() => {
+  console.log("Sistema de servicios listo para usar 💡");
+}, 1000);
