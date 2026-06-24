@@ -144,3 +144,45 @@
   }
 
 }
+.quote {
+  padding-top: 20px;
+
+  &__box {
+    max-width: 760px;
+  }
+
+  &__total {
+    margin-top: 18px;
+    margin-bottom: 16px;
+    font-weight: 800;
+    color: var(--text);
+  }
+}
+
+.quote-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+
+  span {
+    color: var(--text-muted);
+  }
+
+  strong {
+    color: var(--text);
+  }
+}
+
+.service-card__price {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.service-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}

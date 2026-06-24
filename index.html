@@ -2,19 +2,13 @@
 <html lang="es">
 
 <head>
-
-  <!-- META -->
   <meta charset="UTF-8">
 
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
-
-  <!-- SEO -->
-  <title>
-    red.agenciacreativa | Marketing digital
-  </title>
+  <title>red.agenciacreativa | Marketing digital</title>
 
   <meta
     name="description"
@@ -26,46 +20,41 @@
     content="marketing digital, branding, community manager, diseño, redes sociales, uruguay"
   >
 
-  <!-- FONT AWESOME -->
+  <meta
+    name="author"
+    content="red.agenciacreativa"
+  >
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   >
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+  >
 
-  <!-- CSS -->
   <link
     rel="stylesheet"
     href="assets/css/style.css"
   >
-
 </head>
 
 <body>
 
-  <!-- ========================= -->
-  <!-- HEADER -->
-  <!-- ========================= -->
-
   <header class="site-header">
-
     <div class="container nav">
 
-      <!-- LOGO -->
       <a
         class="nav__brand"
         href="index.html"
         aria-label="Ir al inicio"
       >
-
         <img
           class="nav__logo"
           src="img/Titulo.png"
           alt="Logo de red.agenciacreativa"
         >
-
       </a>
-
-      <!-- MENU MOBILE -->
       <input
         class="nav__check"
         type="checkbox"
@@ -77,114 +66,78 @@
         for="menu"
         aria-label="Abrir menú"
       >
-
         <span></span>
         <span></span>
         <span></span>
-
       </label>
 
-      <!-- NAVEGACION -->
       <nav
         class="nav__menu"
         aria-label="Navegación principal"
       >
-
         <ul class="nav__list">
 
           <li>
-
             <a
               class="nav__link nav__link--active"
               href="index.html"
             >
-
               <i class="fa-solid fa-house"></i>
-
               Inicio
-
             </a>
-
           </li>
 
           <li>
-
             <a
               class="nav__link"
               href="pages/sobremi.html"
             >
-
               <i class="fa-solid fa-user"></i>
-
               Sobre mí
-
             </a>
-
           </li>
 
           <li>
-
             <a
               class="nav__link"
               href="pages/servicios.html"
             >
-
               <i class="fa-solid fa-briefcase"></i>
-
               Servicios
-
             </a>
-
           </li>
 
           <li>
-
             <a
               class="nav__link"
               href="pages/trabajos.html"
             >
-
               <i class="fa-solid fa-image"></i>
-
               Trabajos
-
             </a>
-
           </li>
 
           <li>
-
             <a
               class="nav__link"
               href="pages/contacto.html"
             >
-
               <i class="fa-solid fa-envelope"></i>
-
               Contacto
-
             </a>
-
           </li>
 
         </ul>
-
       </nav>
 
     </div>
-
   </header>
-
-  <!-- MAIN -->
-
   <main class="site-main">
 
     <section class="hero">
-
       <div class="container hero__content">
 
         <div class="hero__text">
-
           <h1>
             Marketing digital simple, humano y efectivo.
           </h1>
@@ -195,7 +148,6 @@
           </p>
 
           <div class="hero__actions">
-
             <a
               class="btn btn--primary"
               href="pages/servicios.html"
@@ -209,38 +161,291 @@
             >
               Contactarme
             </a>
-
           </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="section dynamic-services">
+      <div class="container">
+
+        <h2 class="section__title">
+          Servicios destacados
+        </h2>
+
+        <p class="section__lead">
+          Explorá los servicios según lo que necesite tu marca. Las cards se cargan dinámicamente desde un archivo JSON.
+        </p>
+        <div class="filters">
+
+          <button
+            class="btn btn--outline filter-btn active"
+            data-category="todos"
+            type="button"
+          >
+            Todos
+          </button>
+
+          <button
+            class="btn btn--outline filter-btn"
+            data-category="Marketing"
+            type="button"
+          >
+            Marketing
+          </button>
+
+          <button
+            class="btn btn--outline filter-btn"
+            data-category="Identidad visual"
+            type="button"
+          >
+            Branding
+          </button>
+
+          <button
+            class="btn btn--outline filter-btn"
+            data-category="Estrategia"
+            type="button"
+          >
+            Estrategia
+          </button>
+
+        </div>
+        <div class="search-box">
+          <label for="buscador-servicios">
+            Buscar servicios
+          </label>
+
+          <input
+            type="text"
+            id="buscador-servicios"
+            placeholder="Buscar por nombre, categoría o descripción..."
+          >
+        </div>
+        <p
+          id="contador-servicios"
+          class="services-counter"
+        >
+          Servicios disponibles: 0
+        </p>
+
+        <div
+          id="servicios-dinamicos"
+          class="grid grid--3"
+        >
+        </div>
+        <article
+          id="detalle-servicio"
+          class="service-detail card hidden"
+        >
+          <h3 id="detalle-titulo">
+            Detalle del servicio
+          </h3>
+
+          <p
+            id="detalle-categoria"
+            class="service-detail__category"
+          ></p>
+
+          <p id="detalle-descripcion"></p>
+
+          <a
+            id="detalle-link"
+            class="btn btn--primary"
+            href="pages/servicios.html"
+          >
+            Ver más
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section quote">
+      <div class="container">
+
+        <h2 class="section__title">
+          Armá tu cotización
+        </h2>
+
+        <p class="section__lead">
+          Agregá servicios y simulá una cotización inicial para tu marca.
+        </p>
+
+        <div class="quote__box card">
+
+          <div id="resumen-cotizacion">
+            <p class="muted">
+              Todavía no agregaste servicios.
+            </p>
+          </div>
+
+          <p
+            id="total-cotizacion"
+            class="quote__total"
+          >
+            Total estimado: $0
+          </p>
+
+          <button
+            id="limpiar-cotizacion"
+            class="btn btn--outline"
+            type="button"
+          >
+            Limpiar cotización
+          </button>
 
         </div>
 
       </div>
+    </section>
 
+    <section class="section recommender">
+      <div class="container">
+
+        <h2 class="section__title">
+          ¿No sabés qué servicio elegir?
+        </h2>
+
+        <p class="section__lead">
+          Elegí la opción que más se parezca a tu situación y recibí una recomendación.
+        </p>
+
+        <div class="recommender__options">
+
+          <button
+            class="btn btn--outline recommender__btn"
+            data-service="redes"
+            type="button"
+          >
+            No sé qué publicar
+          </button>
+
+          <button
+            class="btn btn--outline recommender__btn"
+            data-service="branding"
+            type="button"
+          >
+            Mi marca no tiene identidad
+          </button>
+
+          <button
+            class="btn btn--outline recommender__btn"
+            data-service="impulso"
+            type="button"
+          >
+            Quiero vender mejor
+          </button>
+
+        </div>
+
+        <div class="recommender__result card">
+          <h3>
+            Resultado
+          </h3>
+
+          <p
+            id="mensaje-js"
+            class="recommender__message"
+          >
+            Tocá una opción para recibir una recomendación.
+          </p>
+        </div>
+
+      </div>
+    </section>
+    <section class="why section">
+      <div class="container why__wrap">
+
+        <div class="why__text">
+          <h2 class="section__title">
+            ¿Por qué trabajar conmigo?
+          </h2>
+
+          <p class="section__lead">
+            Porque no se trata solo de subir posteos: se trata de que tu marca se entienda,
+            genere confianza y tenga un sistema que se pueda sostener.
+          </p>
+
+          <ul class="checklist">
+            <li>Orden en la comunicación</li>
+            <li>Diseño claro y profesional</li>
+            <li>Mensajes simples y estratégicos</li>
+            <li>Contenido pensado para objetivos reales</li>
+          </ul>
+        </div>
+
+        <div class="why__cards">
+
+          <article class="mini-card">
+            <h3>
+              Orden
+            </h3>
+
+            <p class="muted">
+              Planificamos para que no vivas improvisando contenido.
+            </p>
+          </article>
+
+          <article class="mini-card">
+            <h3>
+              Claridad
+            </h3>
+
+            <p class="muted">
+              Tu propuesta se entiende rápido y comunica mejor.
+            </p>
+          </article>
+
+          <article class="mini-card">
+            <h3>
+              Resultados
+            </h3>
+
+            <p class="muted">
+              Estrategia y ejecución para que tu presencia digital tenga sentido.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
-
   <footer class="site-footer">
-
     <div class="container footer">
 
       <p>
         <strong>
           red.agenciacreativa
         </strong>
+        — Marketing, branding y contenido.
       </p>
 
       <p class="muted">
         Montevideo, Uruguay · 2026
       </p>
 
-    </div>
+      <div class="footer__links">
+        <a href="pages/servicios.html">
+          Servicios
+        </a>
 
+        <a href="pages/trabajos.html">
+          Trabajos
+        </a>
+
+        <a href="pages/contacto.html">
+          Contacto
+        </a>
+      </div>
+
+    </div>
   </footer>
 
-  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
   <script src="assets/js/main.js"></script>
 

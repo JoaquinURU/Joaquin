@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "nombre": "Gestión de redes",
+    "categoria": "Marketing",
+    "descripcion": "Calendario, diseño y estrategia para redes sociales.",
+    "detalle": "Ideal para marcas que necesitan ordenar su comunicación mensual, publicar con constancia y mantener una estética coherente.",
+    "icono": "📱",
+    "link": "pages/servicios.html",
+    "precio": 12000
+  },
+  {
+    "id": 2,
+    "nombre": "Branding e identidad",
+    "categoria": "Identidad visual",
+    "descripcion": "Diseño visual coherente para que tu marca se vea profesional.",
+    "detalle": "Recomendado para marcas que necesitan definir colores, tipografías, estilo visual y piezas base para comunicar con claridad.",
+    "icono": "🎨",
+    "link": "pages/servicios.html",
+    "precio": 10000
+  },
+  {
+    "id": 3,
+    "nombre": "Impulso digital",
+    "categoria": "Estrategia",
+    "descripcion": "Optimización de contenido, perfil y conversión.",
+    "detalle": "Pensado para marcas que ya tienen presencia digital, pero necesitan mejorar su perfil, llamados a la acción y estrategia de contenido.",
+    "icono": "🚀",
+    "link": "pages/servicios.html",
+    "precio": 9000
+  },
+  {
+    "id": 4,
+    "nombre": "Asesoría personalizada",
+    "categoria": "Estrategia",
+    "descripcion": "Sesiones 1:1 para ordenar tu comunicación y definir próximos pasos.",
+    "detalle": "Una instancia personalizada para revisar tu caso, detectar oportunidades y definir un plan de acción concreto.",
+    "icono": "💡",
+    "link": "pages/contacto.html",
+    "precio": 5000
+  },
+  {
+    "id": 5,
+    "nombre": "Diseño de piezas",
+    "categoria": "Identidad visual",
+    "descripcion": "Piezas gráficas claras, prolijas y alineadas a tu marca.",
+    "detalle": "Perfecto para marcas que necesitan posts, historias, banners o piezas visuales puntuales con una estética consistente.",
+    "icono": "🖼️",
+    "link": "pages/trabajos.html",
+    "precio": 7000
+  }
+]
